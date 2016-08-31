@@ -17,7 +17,7 @@ case class Player(name: String, score: Int)
 class Student(val name: String, val score: Int)
 
 object Student {
-  def unapply(std: Student): Option[(String, Int)] = Some(std.name, std.score)
+  def unapply(std: Student): Option[(String, Int)] = Some(Studentstd.name, (String, Int)std.score)
 }
 
 def printMessage[T](player: T) = player match {
