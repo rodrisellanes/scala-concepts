@@ -29,3 +29,17 @@ val isOdd: PartialFunction[Int, String] = {
 }
 
 List(1, 2, 3, 4) map(isEven orElse isOdd)
+
+// Refreshing High Order Functions (with anonymous functions)
+
+def operationsHOF(n: Int => Int) = n
+def operations(n: Int): Int = n + n
+
+operations(5)
+operationsHOF(x => x + 4).apply(2)
+operationsHOF(x => x * 2).apply(2)
+
+
+val words = List("HI", "BYE", "GOOD", "WARCRAFT")
+
+words map(w => if(w.contains("WAR")) w else "No match") foreach(println)
