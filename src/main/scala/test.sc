@@ -1,5 +1,9 @@
 import pattMatchingAnnFunc._
 
+import scala.concurrent.Future
+import scala.concurrent.ExecutionContext.Implicits.global
+import scala.util.Success
+
 val wordFrequencies: Seq[(String, Int)] = ("habitual", 6) :: ("and", 56) :: ("consuetudinary", 2) ::
   ("additionally", 27) :: ("homely", 5) :: ("society", 13) :: Nil
 
@@ -43,3 +47,16 @@ operationsHOF(x => x * 2).apply(2)
 val words = List("HI", "BYE", "GOOD", "WARCRAFT")
 
 words map(w => if(w.contains("WAR")) w else "No match") foreach(println)
+
+
+def functTest(f: Int): Unit = println(s"F value is $f")
+functTest(20)
+
+val future = Future { Thread.sleep(500) ; 26 }
+future.isCompleted
+
+println(s"I'm a future $future")
+Thread.sleep(500)
+
+future.isCompleted
+println(s"I'm a future $future")

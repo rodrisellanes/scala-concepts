@@ -5,7 +5,6 @@ object pattMatchingAnnFunc extends App {
 
   println("Test o Hello")
 
-
   val songTitles = List("One", "Other break in the wall", "Master of puppets", "Learning to live", "Morning time")
   println(songTitles.map(s => s.toLowerCase))
   println(songTitles.map(_.toLowerCase))
