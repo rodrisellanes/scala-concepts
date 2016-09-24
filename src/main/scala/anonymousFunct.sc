@@ -25,3 +25,19 @@ def div(a: Int, b: Int) = a / b
 mathOperations(9, 0, sum)
 
 mathOperations2(9, 0, div).getOrElse("Not division by 0")
+
+
+// More anonymous functions
+def funct(f: Int => Int)(n: Int): Int = {
+  f(n)
+}
+funct(x => x * x)(4)
+
+def funct2(n: Int, m: Int)(f: (Int, Int) => Int) = {
+  f(n, m)
+}
+funct2(2, 8)((x, y) => x * y)
+
+
+
+
