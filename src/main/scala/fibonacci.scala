@@ -12,7 +12,6 @@ object fibonacci extends App {
   }
   println(fibonacci(6))
 
-
   /* Fobonacci returning a List */
 
   def fibonacciList(bound: Int): List[Int] = {
@@ -38,7 +37,7 @@ object fibonacci extends App {
     BigInt(1) #::
     fibs.zip(fibs.tail).map { n => n._1 + n._2 }
 
-  println(fibs.take(500).toList)
+  println(fibs.take(5).toList)
 
 
 }
